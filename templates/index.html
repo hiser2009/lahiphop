@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <link rel="stylesheet" href="static/css/main.css">
+  <head>
+    <title>Events List</title>
+  </head>
+  <body>
+    <h1>Events List</h1>
+    <ul>
+      {% for event in events %}
+        {% for p_tag in event.find_all('p') %}
+          <li>{{ p_tag.text }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+    <h3>{{ pst_formatted }}</h3>
+  </body>
+</html>
+
