@@ -1,6 +1,6 @@
 import pytest
 from flask import template_rendered
-from app import app
+from event import event
 
 @pytest.fixture
 def captured_templates(app):
